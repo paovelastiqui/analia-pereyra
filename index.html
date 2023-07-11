@@ -62,10 +62,10 @@
     <!--About-->
     <section id="about" class="about">
         <div class="about-text">
-           <h3>SOBRE MI</h3>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi, similique quasi? Sapiente cupiditate tempore nemo, nam veniam perspiciatis facere aperiam saepe quae enim, dicta fugit. Quisquam hic mollitia cupiditate sint.</p>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi, similique quasi? Sapiente cupiditate tempore nemo, nam veniam perspiciatis facere aperiam saepe quae enim, dicta fugit. Quisquam hic mollitia cupiditate sint.</p>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi, similique quasi? Sapiente cupiditate tempore nemo, nam veniam perspiciatis facere aperiam saepe quae enim, dicta fugit. Quisquam hic mollitia cupiditate sint.</p> 
+            <h3>SOBRE MI</h3>
+            <p>Soy Licenciada y Profesora de Psicopedagogía. Me formé en LSA (Lengua de Señas Argentina), e hice una especialización en Inclusión Educativa para personas con discapacidad.</p>
+            <p>Actualmente soy responsable del área de accesibilidad del Planetario de Buenos Aires, Galileo Galilei.</p>
+            <p>Además, colaboro en el Hogar de Convivencias perteneciente a la Fundación Elegí Sonreir, en el cual doy apoyo a niños y adolescentes.</p> 
         </div>
         <div class="about-image">
             <img src="img/profile.JPG" alt="perfil">
@@ -82,15 +82,16 @@
             </div>
             <div class="terapias-text-right">
                 <h4>PSICOPEDAGOGOGÍA</h4>
-                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi, similique quasi? Sapiente cupiditate tempore nemo, nam veniam perspiciatis facere aperiam saepe quae enim, dicta fugit. Quisquam hic mollitia cupiditate sint.</p>
-                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi, similique quasi? Sapiente cupiditate tempore nemo, nam veniam perspiciatis facere aperiam saepe quae enim, dicta fugit. Quisquam hic mollitia cupiditate sint.</p>
+                <p>La psicopedagogía es la disciplina que se ocupa de los modelos de aprendizaje y sus vicisitudes. Trabaja con el sujeto en situación de aprendizaje. Es decir que la psicopedagogía está presente a lo largo de toda la vida.</p>
+                <p>Intervenimos profesionalmente dentro del ámbito de la salud y educación, formando equipos de trabajos en instituciones educativas, hospitalarias, empresas, fundaciones, ámbitos comunitarios, contextos carcelarios, clínicas...en fin, en todos aquellos espacios donde el aprendizaje esté presente.</p>
+                <p>La psicopedagogía es el puente entre a dificultad de aprendizaje y el crecimiento de las personas en cada etapa evolutiva.</p>
              </div>
         </div>
         <div class="terapias-box">
             <div class="terapias-text-left">
                 <h4>DISCAPACIDAD</h4>
-                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi, similique quasi? Sapiente cupiditate tempore nemo, nam veniam perspiciatis facere aperiam saepe quae enim, dicta fugit. Quisquam hic mollitia cupiditate sint.</p>
-                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi, similique quasi? Sapiente cupiditate tempore nemo, nam veniam perspiciatis facere aperiam saepe quae enim, dicta fugit. Quisquam hic mollitia cupiditate sint.</p>
+                 <p>Según la convención Internacional de Discapacidad (Ley 26.378), la discapacidad es un concepto que evoluciona y que resulta de la interaccion entre las personas con deficiencias y las barreras debidas a la actitud y el entorno que evitan la participación plena y efectiva en igualdad de condicones con los demás.</p>
+                 <p>Esto quiere decir que si en nuestra sociedad NO hubiese barreras (Ej: rampas, personal capacitado en LSA, etc.) No conoceriamos la discapacidad como tal ya que estariamos todos/as en igualdad de condiciones.</p>
              </div>
             <div class="terapias-image-right">
                 <img src="img/terapia-discap.png" alt="discapacidad">
@@ -102,8 +103,8 @@
             </div>
             <div class="terapias-text-right">
                 <h4>ACOMPAÑAMIENTO</h4>
-                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi, similique quasi? Sapiente cupiditate tempore nemo, nam veniam perspiciatis facere aperiam saepe quae enim, dicta fugit. Quisquam hic mollitia cupiditate sint.</p>
-                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi, similique quasi? Sapiente cupiditate tempore nemo, nam veniam perspiciatis facere aperiam saepe quae enim, dicta fugit. Quisquam hic mollitia cupiditate sint.</p>
+                 <p>La accesibilidad es la acción que permite que las personas puedan ir a lugares y participar de actividades en todos los lugares tanto públicos como privados.</p>
+                 <p>Es la condición mediante la cual un entorno es plenamente accesible a todos los individuos, sin importar si estos sufren de alguna discapacidad que dificulte su plena inclusión. Es decir, todos los entornos, bienes, productos y servicios deben poder ser utilizados por todas las personas de forma autónoma</p>
             </div>
         </div>
     </section>
@@ -186,28 +187,35 @@
         <div class="contact-form">
             <h3>CONTACTO</h3>
             <form action="/">
-                <label for="name">NOMBRE Y APELLIDO:</label>
-                <input type="text" id="name" name="name" required><br><br>
-
-                <label for="phone">TELEFONO:</label>
-                <input type="number" id="phone" name="phone" required><br><br>
-
-
-                <label for="email">EMAIL:</label>
-                <input type="email" id="email" name="email" required><br><br>
-
-                <label for="mensaje">MENSAJE:</label>
-                <textarea id="mensaje" name="mensaje" rows="4" cols="50" required></textarea><br><br>
-
-                <input type="submit" value="Enviar">
+                <div class="div-form">
+                    <label for="name" id="name">NOMBRE Y APELLIDO: <input id="name" class="rellenar" name="name" type="text" placeholder="Nombre y Apellido" required/></label>
+                </div>
+                <div class="div-form">
+                    <label for="number" id="number">TELÉFONO: <input id="number" class="rellenar" name="number" type="number" placeholder="Teléfono" required/></label>
+                </div>
+                <div class="div-form">
+                    <label for="email" id="email">EMAIL: <input id="email" class="rellenar" name="email" type="email" placeholder="Email" required/></label>
+                </div>
+                <div class="div-form">
+                    <label for="interes">DEJAME TU MENSAJE:
+                        <div class="area-text">
+                            <textarea id="interes" name="interes" rows="5" placeholder="Escribir mensaje..."></textarea>
+                        </div>
+                    </label>
+                </div>
+                <div class="div-form">
+                    <div class="div-submit">
+                      <input id="submit" type="submit" value="ENVIAR" />  
+                    </div>
+                </div>
             </form>
         </div>
         <div class="contact-information">
             <ul class="contact-redes">
                 <li><a href="#" target="_blank" rel="noopener noneferrer"><span>emailprofesional@email.com</span><img src="img/icon-email-bw.svg" alt="icono-email"></a></li>
-                <li><a href="https://ar.linkedin.com/in/analia-belen-pereyra-b03091ab?original_referer=https%3A%2F%2Fwww.google.com%2F" target="_blank" rel="noopener noreferrer"><span>Perfil de LinkedIn</span><img src="img/icon-linkedin-bw.svg" alt="icono-linkedin"></a></li>
+                <li><a href="https://ar.linkedin.com/in/analia-belen-pereyra-b03091ab?original_referer=https%3A%2F%2Fwww.google.com%2F" target="_blank" rel="noopener noreferrer"><span>Analia Pereyra - LinkedIn</span><img src="img/icon-linkedin-bw.svg" alt="icono-linkedin"></a></li>
                 <li><a href="#" target="_blank" rel="noopener noneferrer"><span>+54 11 xxxx-xxxx</span><img src="img/icon-phone-bw.svg" alt="icono-phone"></a></li>
-                <li><a href="https://www.instagram.com/lic.analiabelenpereyra/" target="_blank" rel="noopener noneferrer"><span>Perfil de Instagram</span><img src="img/icon-instagram-bw.svg" alt="icono-instagram"></a></li>
+                <li><a href="https://www.instagram.com/lic.analiabelenpereyra/" target="_blank" rel="noopener noneferrer"><span>Analia Pereyra - Instagram</span><img src="img/icon-instagram-bw.svg" alt="icono-instagram"></a></li>
                 <li><a href="#" target="_blank" rel="noopener noreferrer"><span>WhatsApp</span><img src="img/icon-whatsapp-bw.svg" alt="icono-whatsapp"></a></li> 
             </ul>
         </div>
