@@ -38,12 +38,14 @@ p {
 .navbar {
   background-color: #E9A2AD;
   padding: 2rem; }
-  .navbar .navbar-collapse {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end; }
-    .navbar .navbar-collapse .nav-item a {
-      font-size: 1.2rem; }
+
+.navbar-collapse {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; }
+
+.nav-item a {
+  font-size: 1.2rem; }
 
 .hero {
   display: flex;
