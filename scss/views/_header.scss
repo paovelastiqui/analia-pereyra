@@ -1,0 +1,19 @@
+//HEADER
+
+.navbar {
+    background-color: $color-pink-light;
+    padding: 2rem; 
+    .navbar-collapse {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end; 
+        .nav-item {
+            a {
+                font-size: 1.2rem; } 
+        }
+    }
+}
+
+
+
+

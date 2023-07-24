@@ -1,0 +1,30 @@
+//MIXINS
+
+@mixin grid {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin sizes($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+//EXTENDS
+
+.list-v {
+    list-style: none;
+    display: list-item;
+}
+
+.list-h {
+    @extend .list-v;
+    display: inline-flex;
+}

@@ -1,5 +1,10 @@
-@import url(./utilities/_variables.scss);
-/*ESTILOS GENERALES*/
+.list-v, .list-h {
+  list-style: none;
+  display: list-item; }
+
+.list-h {
+  display: inline-flex; }
+
 * {
   padding: 0;
   margin: 0;
@@ -7,7 +12,7 @@
 
 html {
   font-size: 62.5%;
-  font-family: 'Work Sans', sans-serif; }
+  font-family: "Work Sans", sans-serif; }
 
 h1 {
   font-size: 4rem; }
@@ -20,7 +25,8 @@ h3 {
   margin-bottom: 5px; }
 
 h4 {
-  font-size: 1.5rem; }
+  font-size: 1.5rem;
+  margin: 10px 0; }
 
 a {
   text-decoration: none; }
@@ -29,24 +35,20 @@ p {
   font-size: 1.5rem;
   margin: 10px 0px; }
 
-ul {
-  list-style: none; }
-
-/*HEADER*/
 .navbar {
   background-color: #E9A2AD;
   padding: 2rem; }
+  .navbar .navbar-collapse {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; }
+    .navbar .navbar-collapse .nav-item a {
+      font-size: 1.2rem; }
 
-.navbar-collapse {
+.hero {
   display: flex;
+  justify-content: center;
   align-items: center;
-  justify-content: flex-end; }
-
-.nav-item a {
-  font-size: 1.2rem; }
-
-/*HERO*/
-#hero {
   width: 100%;
   height: 550px;
   background-image: url(../img/portada.jpeg);
@@ -54,179 +56,193 @@ ul {
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   padding: 35px; }
-  #hero div {
+  .hero div {
     text-align: center; }
-    #hero div p {
+    .hero div p {
       font-size: 1.5rem;
       margin-top: 8px; }
 
-/*ABOUT*/
 .about {
+  display: grid;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: auto;
   padding: 30px 70px;
-  background-color: #DFE6ED;
-  display: grid;
-  grid-template-columns: minmax(350px, 2fr) 1fr;
-  justify-content: center;
-  align-items: center; }
-  .about .about-text {
+  background-color: #C3CFD9;
+  grid-template-columns: minmax(350px, 2fr) 1fr; }
+  .about__text {
     padding: 25px 75px; }
-  .about .about-image {
+  .about__image {
     text-align: center;
     padding: 10px; }
-    .about .about-image img {
+    .about__image img {
       width: 80%;
       height: auto;
       border-radius: 100%; }
 
-/*TERAPIAS*/
 .terapias {
   width: 100%;
   height: auto;
-  padding: 0 35px; }
+  background-color: #F5F5E7;
+  padding: 20px 35px; }
   .terapias h3 {
     text-align: center;
+    margin-bottom: 0;
     padding: 15px; }
-  .terapias .terapias-box {
-    padding: 5px 20px;
+  .terapias__box {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    align-items: center; }
-    .terapias .terapias-box img {
+    justify-content: center;
+    align-items: center;
+    padding: 5px 20px;
+    grid-template-columns: 1fr 1fr 1fr; }
+    .terapias__box img {
       width: 320px; }
-    .terapias .terapias-box .terapias-text-left {
+    .terapias__box__text__left {
       grid-column: 1/3;
       padding: 20px; }
-    .terapias .terapias-box .terapias-text-right {
+    .terapias__box__text__right {
       grid-column: 2/4;
       padding: 20px; }
-    .terapias .terapias-box .terapias-image-left {
+    .terapias__box__image__left {
       grid-column: 1/2;
       padding-left: 20px;
       text-align: left; }
-    .terapias .terapias-box .terapias-image-right {
+    .terapias__box__image__right {
       grid-column: 3/4;
       padding-right: 20px;
       text-align: right; }
 
-/*PUBLICACIONES*/
+.trabajos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  flex-direction: column;
+  background-color: #C3CFD9;
+  padding: 35px 0px; }
+  .trabajos__title {
+    margin-bottom: 10px; }
+  .trabajos__images {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly; }
+    .trabajos__images img {
+      width: 200px; }
+
 .publicaciones {
   width: 100%;
-  height: auto; }
+  height: auto;
+  background-color: #F5F5E7;
+  padding-bottom: 15px; }
   .publicaciones h3 {
     text-align: center;
     padding: 15px; }
-  .publicaciones .articulos {
+  .publicaciones__articulos {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     gap: 8px; }
-    .publicaciones .articulos article {
+    .publicaciones__articulos article {
+      width: 300px;
+      height: 335px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       align-items: center;
-      width: 300px;
-      height: 335px;
       padding: 10px;
       margin: 10px;
       text-align: center;
       border: 2px solid #C3CFD9; }
-      .publicaciones .articulos article img {
+      .publicaciones__articulos article img {
         width: 150px; }
-      .publicaciones .articulos article div p {
+      .publicaciones__articulos article div p {
         margin: 0; }
-      .publicaciones .articulos article div button {
+      .publicaciones__articulos article div button {
         padding: 5px;
         margin: 10px;
         background-color: #D3455B;
-        color: white;
         border-radius: 15px; }
+        .publicaciones__articulos article div button a {
+          color: #F5F5E7; }
+    .publicaciones__articulos article:hover {
+      background-color: #C3CFD9; }
 
-/*CONTACTO*/
 .contact {
   width: 100%;
   height: auto;
-  background-color: #DFE6ED;
+  background-color: #C3CFD9;
   display: grid;
   grid-template-columns: 2fr 1fr;
   padding: 15px; }
-  .contact .contact-form {
+  .contact__form {
     padding: 10px 50px;
     display: flex;
     flex-direction: column;
     justify-content: center; }
-    .contact .contact-form h3 {
+    .contact__form h3 {
       padding-bottom: 5px;
       text-align: center; }
-    .contact .contact-form form .div-form {
-      padding: 10px;
+    .contact__form form .div-form {
       display: flex;
+      justify-content: center;
+      padding: 10px;
       flex-direction: column;
-      align-items: left;
-      justify-content: center; }
-      .contact .contact-form form .div-form label {
+      align-items: left; }
+      .contact__form form .div-form label {
         width: 100%; }
-        .contact .contact-form form .div-form label .rellenar {
+        .contact__form form .div-form label .rellenar {
           width: 100%;
           height: 20px;
-          border: solid 1px #ccc;
+          border: solid 1px #C3CFD9;
           padding: 20px 5px; }
-      .contact .contact-form form .div-form .area-text textarea {
-        border: solid 1px #ccc;
+      .contact__form form .div-form .area-text textarea {
+        border: solid 1px #C3CFD9;
         width: 100%; }
-      .contact .contact-form form .div-form .div-submit {
+      .contact__form form .div-form .div-submit {
         text-align: center; }
-        .contact .contact-form form .div-form .div-submit input {
+        .contact__form form .div-form .div-submit input {
           width: 50px;
           height: 30px; }
-  .contact .contact-information {
+  .contact__information {
     align-self: center; }
-    .contact .contact-information .contact-redes {
-      display: list-item;
+    .contact__information__redes {
       text-align: right;
       padding: 0px 50px 0 30px; }
-      .contact .contact-information .contact-redes img {
+      .contact__information__redes img {
         width: 60px; }
-      .contact .contact-information .contact-redes a {
+      .contact__information__redes a {
         color: black;
         font-size: 1.25rem; }
 
-/*FOOTER*/
 .footer {
   width: 100%;
   height: 125px;
   background-color: #E9A2AD;
   display: grid;
   grid-template-columns: 1fr 2fr 1fr; }
-  .footer .footer-left {
+  .footer__left {
     text-align: center;
     align-self: center;
     padding: 10px 0; }
-    .footer .footer-left img {
+    .footer__left img {
       width: 30%;
       height: auto; }
-  .footer .footer-center {
+  .footer__center {
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center; }
-  .footer .footer-right {
+  .footer__right {
     display: flex;
     justify-content: center;
     align-items: center; }
-    .footer .footer-right .footer-redes {
-      display: inline-flex; }
-      .footer .footer-right .footer-redes img {
-        width: 40px; }
+    .footer__right__redes img {
+      width: 40px; }
 
-/*RESPONSIVE*/
 @media screen and (max-width: 1024px) {
   .contact .contact-information .contact-redes {
     padding: 0 30px 0 0; }
@@ -236,59 +252,61 @@ ul {
 @media screen and (max-width: 860px) {
   .about {
     padding: 25px 0; }
-    .about .about-text {
+    .about__text {
       padding: 25px 60px; }
-  .terapias .terapias-box {
+  .terapias__box {
     padding: 0; }
-    .terapias .terapias-box img {
+    .terapias__box img {
       width: 300px; }
-    .terapias .terapias-box .terapias-image-left, .terapias .terapias-box .terapias-image-right {
+    .terapias__box__image__left, .terapias__box__image__right {
       padding: 0; }
-    .terapias .terapias-box .terapias-text-right {
+    .terapias__box__text__right {
       padding-right: 0; }
-    .terapias .terapias-box .terapias-text-left {
+    .terapias__box__text__left {
       padding-left: 0; }
+  .trabajos__images img {
+    width: 150px; }
   .contact {
     padding: 15px 0; }
-    .contact .contact-information .contact-redes {
+    .contact__information__redes {
       padding: 0 15px 0 0; } }
 
 @media screen and (max-width: 768px) {
   .about {
     grid-template-columns: 1fr;
     height: auto; }
-    .about .about-image img {
+    .about__image img {
       width: 40%;
       margin-top: 10px; }
-  .terapias .terapias-box {
+  .terapias__box {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr; }
-    .terapias .terapias-box .terapias-image-left {
+    .terapias__box__image__left {
       grid-row: 2/3;
       grid-column: 1/2;
       text-align: center; }
-    .terapias .terapias-box .terapias-image-right {
+    .terapias__box__image__right {
       grid-row: 2/3;
       grid-column: 1/2;
       text-align: center; }
-    .terapias .terapias-box .terapias-text-left {
+    .terapias__box__text__left {
       grid-row: 1/2;
       grid-column: 1/2;
       padding: 0; }
-    .terapias .terapias-box .terapias-text-right {
+    .terapias__box__text__right {
       grid-row: 1/2;
       grid-column: 1/2;
       padding: 0; }
   .contact {
     padding: 15px 5px; }
-    .contact .contact-form {
+    .contact__form {
       padding: 0 20px; }
-    .contact .contact-information .contact-redes {
+    .contact__information__redes {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center; }
-      .contact .contact-information .contact-redes span {
+      .contact__information__redes span {
         display: none; }
   .footer {
     height: auto; } }
@@ -296,21 +314,23 @@ ul {
 @media screen and (max-width: 576px) {
   .about {
     padding: 25px 0px; }
-  .terapias .terapias-box {
+  .terapias__box {
     padding: 0; }
-    .terapias .terapias-box img {
+    .terapias__box img {
       width: 350px; }
+  .trabajos__images img {
+    width: 120px; }
   .contact {
     grid-template-columns: 1fr; }
-    .contact .contact-information .contact-redes {
+    .contact__information__redes {
       display: flex;
       flex-direction: row;
       justify-content: center;
       align-items: center; }
-      .contact .contact-information .contact-redes span {
+      .contact__information__redes span {
         display: none; }
   .footer {
     height: auto;
     grid-template-columns: 1fr; }
-    .footer .footer-left img {
+    .footer__left img {
       width: 80px; } }

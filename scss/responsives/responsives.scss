@@ -1,0 +1,136 @@
+//RESPONSIVE
+
+@media screen and (max-width: 1024px) {
+    .contact {
+        .contact-information {
+            .contact-redes {
+                padding: 0 30px 0 0; }    
+        } 
+    }
+    .footer {
+        height: auto; }
+}
+
+@media screen and (max-width: 860px) {
+    .about {
+        padding: 25px 0;
+        &__text {
+            padding: 25px 60px; }
+    }
+    .terapias {
+        &__box {
+            padding: 0;
+            img {
+                width: 300px; }
+            &__image__left, &__image__right {
+                padding: 0; }
+            &__text__right {
+                padding-right: 0; }
+            &__text__left {
+                padding-left: 0; }
+        }
+    }
+    .trabajos {
+        &__images {
+            img {
+                width: 150px; }
+        }
+    }
+    .contact {
+        padding: 15px 0;
+        &__information {
+            &__redes {
+                padding: 0 15px 0 0; }    
+        } 
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .about {
+        grid-template-columns: 1fr;
+        height: auto;
+        &__image {
+            img {
+                width: 40%;
+                margin-top: 10px; }    
+        }    
+    }
+    .terapias {
+        &__box {
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr;
+            &__image__left {
+                grid-row: 2/3;
+                grid-column: 1/2;
+                text-align: center; }
+            &__image__right {
+                grid-row: 2/3;
+                grid-column: 1/2;
+                text-align: center; }
+            &__text__left {
+                grid-row: 1/2;
+                grid-column: 1/2;
+                padding: 0; }
+            &__text__right {
+                grid-row: 1/2;
+                grid-column: 1/2;
+                padding: 0; }
+        }    
+    }
+    .contact {
+        padding: 15px 5px;
+        &__form {
+            padding: 0 20px; }
+        &__information {
+            &__redes {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                span {
+                    display: none; } 
+            }    
+        }
+    }
+    .footer {
+        height: auto; }
+}
+
+@media screen and (max-width: 576px) {
+    .about {
+        padding: 25px 0px; }
+    .terapias {
+        &__box {
+            padding: 0;
+            img {
+                width: 350px; }
+        }
+    }
+    .trabajos {
+        &__images {
+            img {
+                width: 120px; }
+        }
+    }
+    .contact {
+        grid-template-columns: 1fr;
+        &__information {
+            &__redes {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                span {
+                    display: none; } 
+            } 
+        }
+    }
+    .footer {
+        height: auto;
+        grid-template-columns: 1fr;
+        &__left {
+            img {
+                width: 80px; }    
+        }  
+    }
+}

@@ -1,0 +1,25 @@
+//FOOTER
+
+.footer {
+    @include sizes(100%, 125px);
+    background-color: $color-pink-light;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    &__left {
+        text-align: center;
+        align-self: center;
+        padding: 10px 0;
+        img {
+            @include sizes(30%, auto);}
+    }
+    &__center {
+        @include flex;
+        text-align: center; }
+    &__right{
+        @include flex;
+        &__redes {
+            img {
+                width: 40px; }
+        }
+    }
+}

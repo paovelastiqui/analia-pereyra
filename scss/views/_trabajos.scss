@@ -1,0 +1,19 @@
+//TRABAJOS
+
+.trabajos {
+    @include flex;
+    @include sizes(100%, auto);
+    flex-direction: column;
+    background-color: $color-grey;
+    padding: 35px 0px;
+    &__title {
+        margin-bottom: 10px; }
+    &__images {
+        display: flex;
+        width: 100%;
+        justify-content: space-evenly;
+        img {
+            width: 200px; }    
+    }
+    
+}

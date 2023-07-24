@@ -1,0 +1,18 @@
+//HERO
+
+.hero {
+    @include flex;
+    @include sizes(100%, 550px);
+    background-image: url(../img/portada.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 35px;
+    div {
+        text-align: center; 
+        p {
+            font-size: map-get($sizes, small);
+            margin-top: 8px; }   
+    }
+}

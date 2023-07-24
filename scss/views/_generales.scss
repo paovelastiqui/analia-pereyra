@@ -1,0 +1,31 @@
+//ESTILOS GENERALES
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; }
+
+html {
+    font-size: 62.5%;
+    font-family: $font-principal; }
+
+h1 {
+    font-size: map-get($sizes, extra-large); }
+
+h2 {
+    font-size: map-get($sizes, large); }
+
+h3 {
+    font-size: map-get($sizes, medium);
+    margin-bottom: 5px; }
+
+h4 {
+    font-size: map-get($sizes, small);
+    margin: 10px 0; }
+
+a {
+    text-decoration: none; }
+
+p {
+    font-size: map-get($sizes, small) ;
+    margin: 10px 0px; }
