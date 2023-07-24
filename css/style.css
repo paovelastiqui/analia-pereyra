@@ -133,6 +133,8 @@ p {
     justify-content: space-evenly; }
     .trabajos__images img {
       width: 200px; }
+    .trabajos__images img:hover {
+      transform: scale(1.1); }
 
 .publicaciones {
   width: 100%;
