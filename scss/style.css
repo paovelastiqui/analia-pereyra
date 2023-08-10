@@ -1,3 +1,12 @@
+.list-v, .list-h {
+  list-style: none;
+  display: list-item;
+}
+
+.list-h {
+  display: inline-flex;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -34,18 +43,6 @@ a {
 p {
   font-size: 1.5rem;
   margin: 10px 0px;
-}
-
-ul {
-  list-style: none;
-}
-
-.hr-section-divitions {
-  width: 100%;
-  height: 1px;
-  display: inline-block;
-  border: 2px inset #1BB286;
-  color: #1BB286;
 }
 
 .navbar {
@@ -85,71 +82,108 @@ ul {
 }
 
 .about {
-  display: grid;
+  display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   height: auto;
-  padding: 30px 70px;
   background-color: #C3CFD9;
-  grid-template-columns: minmax(350px, 2fr) 1fr;
 }
-.about__text {
+.about__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1500px;
+  padding: 30px 70px;
+}
+.about__container__text {
   padding: 25px 75px;
 }
-.about__image {
+.about__container__image {
   text-align: center;
   padding: 10px;
 }
-.about__image img {
-  width: 80%;
+.about__container__image img {
+  width: 280px;
   height: auto;
   border-radius: 100%;
 }
 
 .terapias {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: auto;
-  padding: 0 35px;
+  background-color: #F5F5E7;
 }
-.terapias h3 {
+.terapias__container {
+  max-width: 1500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px 35px;
+}
+.terapias__container h3 {
   text-align: center;
-  margin-top: 10px;
   margin-bottom: 0;
   padding: 15px;
 }
-.terapias__box {
-  display: grid;
+.terapias__container__a {
+  display: flex;
   justify-content: center;
   align-items: center;
   padding: 5px 20px;
-  grid-template-columns: 1fr 1fr 1fr;
 }
-.terapias__box img {
-  width: 320px;
+.terapias__container__a img {
+  width: 100%;
 }
-.terapias__box__text__left {
-  grid-column: 1/3;
-  padding: 20px;
+.terapias__container__a__text {
+  padding-left: 30px;
 }
-.terapias__box__text__right {
-  grid-column: 2/4;
-  padding: 20px;
+.terapias__container__b {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 20px;
 }
-.terapias__box__image__left {
-  grid-column: 1/2;
-  padding-left: 20px;
-  text-align: left;
+.terapias__container__b img {
+  width: 100%;
 }
-.terapias__box__image__right {
-  grid-column: 3/4;
-  padding-right: 20px;
-  text-align: right;
+.terapias__container__b__text {
+  padding-right: 30px;
+}
+
+.trabajos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  background-color: #C3CFD9;
+  padding: 35px 0px;
+}
+.trabajos__title {
+  margin-bottom: 10px;
+}
+.trabajos__images {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+}
+.trabajos__images img {
+  width: 200px;
+}
+.trabajos__images img:hover {
+  transform: scale(1.13);
 }
 
 .publicaciones {
   width: 100%;
   height: auto;
+  background-color: #F5F5E7;
   padding-bottom: 15px;
 }
 .publicaciones h3 {
@@ -185,8 +219,10 @@ ul {
   padding: 5px;
   margin: 10px;
   background-color: #D3455B;
-  color: white;
   border-radius: 15px;
+}
+.publicaciones__articulos article div button a {
+  color: #F5F5E7;
 }
 .publicaciones__articulos article:hover {
   background-color: #C3CFD9;
@@ -196,66 +232,68 @@ ul {
   width: 100%;
   height: auto;
   background-color: #C3CFD9;
+}
+.contact__container {
+  max-width: 1500px;
   display: grid;
   grid-template-columns: 2fr 1fr;
-  padding: 15px;
+  padding: 15px 0px;
 }
-.contact__form {
+.contact__container__form {
   padding: 10px 50px;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-.contact__form h3 {
+.contact__container__form h3 {
   padding-bottom: 5px;
   text-align: center;
 }
-.contact__form form .div-form {
+.contact__container__form form .div-form {
   display: flex;
   justify-content: center;
   padding: 10px;
   flex-direction: column;
   align-items: left;
 }
-.contact__form form .div-form label {
+.contact__container__form form .div-form label {
   width: 100%;
 }
-.contact__form form .div-form label .rellenar {
+.contact__container__form form .div-form label .rellenar {
   width: 100%;
   height: 20px;
-  border: solid 1px #ccc;
+  border: solid 1px #C3CFD9;
   padding: 20px 5px;
 }
-.contact__form form .div-form .area-text textarea {
-  border: solid 1px #ccc;
+.contact__container__form form .div-form .area-text textarea {
+  border: solid 1px #C3CFD9;
   width: 100%;
 }
-.contact__form form .div-form .div-submit {
+.contact__container__form form .div-form .div-submit {
   text-align: center;
 }
-.contact__form form .div-form .div-submit input {
+.contact__container__form form .div-form .div-submit input {
   width: 50px;
   height: 30px;
 }
-.contact__information {
+.contact__container__information {
   align-self: center;
 }
-.contact__information__redes {
-  display: list-item;
+.contact__container__information__redes {
   text-align: right;
-  padding: 0px 50px 0 30px;
+  padding-right: 50px;
 }
-.contact__information__redes img {
+.contact__container__information__redes img {
   width: 60px;
 }
-.contact__information__redes a {
+.contact__container__information__redes a {
   color: black;
   font-size: 1.25rem;
 }
 
 .footer {
   width: 100%;
-  height: 125px;
+  height: auto;
   background-color: #E9A2AD;
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
@@ -280,96 +318,84 @@ ul {
   justify-content: center;
   align-items: center;
 }
-.footer__right__redes {
-  display: inline-flex;
-}
 .footer__right__redes img {
   width: 40px;
 }
 
 @media screen and (max-width: 1024px) {
-  .contact .contact-information .contact-redes {
+  .contact__container__information__redes {
     padding: 0 30px 0 0;
-  }
-  .footer {
-    height: auto;
   }
 }
 @media screen and (max-width: 860px) {
-  .about {
+  .about__container {
     padding: 25px 0;
   }
-  .about__text {
+  .about__container__text {
     padding: 25px 60px;
   }
-  .terapias__box {
-    padding: 0;
+  .terapias_container__a img, .terapias_container__b img {
+    width: 250px;
   }
-  .terapias__box img {
-    width: 300px;
+  .trabajos__images img {
+    width: 180px;
   }
-  .terapias__box__image__left, .terapias__box__image__right {
-    padding: 0;
-  }
-  .terapias__box__text__right {
-    padding-right: 0;
-  }
-  .terapias__box__text__left {
-    padding-left: 0;
-  }
-  .contact {
+  .contact__container {
     padding: 15px 0;
   }
-  .contact__information__redes {
+  .contact__container__information__redes {
     padding: 0 15px 0 0;
   }
 }
 @media screen and (max-width: 768px) {
-  .about {
-    grid-template-columns: 1fr;
-    height: auto;
+  .about__container {
+    flex-direction: column;
   }
-  .about__image img {
+  .about__container__image img {
     width: 40%;
-    margin-top: 10px;
   }
-  .terapias__box {
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
+  .terapias__container__a {
+    flex-direction: column-reverse;
   }
-  .terapias__box__image__left {
-    grid-row: 2/3;
-    grid-column: 1/2;
-    text-align: center;
-  }
-  .terapias__box__image__right {
-    grid-row: 2/3;
-    grid-column: 1/2;
-    text-align: center;
-  }
-  .terapias__box__text__left {
-    grid-row: 1/2;
-    grid-column: 1/2;
+  .terapias__container__a__text {
     padding: 0;
   }
-  .terapias__box__text__right {
-    grid-row: 1/2;
-    grid-column: 1/2;
+  .terapias__container__a__image {
+    text-align: center;
+  }
+  .terapias__container__a__image img {
+    width: 60%;
+    margin: 10px;
+  }
+  .terapias__container__b {
+    flex-direction: column;
+  }
+  .terapias__container__b__text {
     padding: 0;
   }
-  .contact {
+  .terapias__container__b__image {
+    text-align: center;
+  }
+  .terapias__container__b__image img {
+    width: 60%;
+    margin: 10px;
+  }
+  .trabajos__images img {
+    width: 150px;
+  }
+  .contact__container {
     padding: 15px 5px;
   }
-  .contact__form {
+  .contact__container__form {
     padding: 0 20px;
   }
-  .contact__information__redes {
+  .contact__container__information__redes {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
-  .contact__information__redes span {
+  .contact__container__information__redes span {
     display: none;
   }
   .footer {
@@ -377,25 +403,25 @@ ul {
   }
 }
 @media screen and (max-width: 576px) {
-  .about {
+  .about__container {
     padding: 25px 0px;
   }
-  .terapias__box {
-    padding: 0;
+  .about__container__image img {
+    width: 60%;
   }
-  .terapias__box img {
-    width: 350px;
+  .trabajos__images img {
+    width: 120px;
   }
-  .contact {
+  .contact__container {
     grid-template-columns: 1fr;
   }
-  .contact__information__redes {
+  .contact__container__information__redes {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
   }
-  .contact__information__redes span {
+  .contact__container__information__redes span {
     display: none;
   }
   .footer {
@@ -404,5 +430,13 @@ ul {
   }
   .footer__left img {
     width: 80px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .terapias__container img {
+    width: 100%;
+  }
+  .trabajos__images img {
+    width: 100px;
   }
 }/*# sourceMappingURL=style.css.map */
