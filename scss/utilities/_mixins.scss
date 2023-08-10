@@ -17,6 +17,10 @@
     height: $height;
 }
 
+@mixin max-width {
+    max-width: 1500px;
+}
+
 //EXTENDS
 
 .list-v {

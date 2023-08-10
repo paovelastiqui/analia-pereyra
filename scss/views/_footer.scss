@@ -1,7 +1,7 @@
 //FOOTER
 
 .footer {
-    @include sizes(100%, 125px);
+    @include sizes(100%, auto);
     background-color: $color-pink-light;
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;

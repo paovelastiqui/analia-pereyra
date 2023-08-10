@@ -1,18 +1,21 @@
 //ABOUT
 
 .about {
-    @include grid;
+    @include flex;
     @include sizes(100%, auto);
-    padding: 30px 70px;
     background-color: $color-grey;
-    grid-template-columns: minmax(350px, 2fr) 1fr;
-    &__text {
-        padding: 25px 75px; }
-    &__image {
-        text-align: center;
-        padding: 10px;
-        img {
-            @include sizes(80%, auto);
-            border-radius: 100%; }
+    &__container {
+        @include flex;
+        @include max-width;
+        padding: 30px 70px;
+        &__text {
+            padding: 25px 75px; }
+        &__image {
+            text-align: center;
+            padding: 10px;
+            img {
+                @include sizes(280px, auto);
+                border-radius: 100%; }
+        }
     }
 }

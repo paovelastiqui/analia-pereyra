@@ -2,8 +2,8 @@
 
 .trabajos {
     @include flex;
-    @include sizes(100%, auto);
     flex-direction: column;
+    @include sizes(100%, auto);
     background-color: $color-grey;
     padding: 35px 0px;
     &__title {
@@ -15,7 +15,6 @@
         img {
             width: 200px; }  
         img:hover  {
-            transform: scale(1.1);
-        }
-    } 
+            transform: scale(1.13); }
+    }   
 }
