@@ -18,10 +18,12 @@
         }
     }
     .trabajos {
-        &__images {
-            img {
-                width: 180px; }
-        }
+        &__container {
+            &__images {
+                img {
+                    width: 180px; }
+            }    
+        } 
     }
     .contact__container {
         padding: 15px 0;
@@ -67,10 +69,12 @@
         }  
     }
     .trabajos {
-        &__images {
-            img {
-                width: 150px; }
-        }
+        &__container {
+            &__images {
+                img {
+                    width: 150px; }
+            }    
+        } 
     }
     .contact__container {
         padding: 15px 5px;
@@ -100,9 +104,11 @@
         }    
     }
     .trabajos {
-        &__images {
-            img {
-                width: 120px; }
+        &__container {
+            &__images {
+                img {
+                    width: 120px; }
+            }    
         }
     }
     .contact__container {
@@ -118,7 +124,7 @@
             } 
         }
     }
-    .footer {
+    .footer__container {
         height: auto;
         grid-template-columns: 1fr;
         &__left {
@@ -134,9 +140,11 @@
             width: 100%; }
         }
     .trabajos {
-        &__images {
-            img {
-                width: 100px; }
-        }
+        &__container {
+            &__images {
+                img {
+                    width: 100px; }
+            }    
+        } 
     }
 }

@@ -1,7 +1,11 @@
 //HEADER
 
-.navbar {
+header {
     background-color: $color-pink-light;
+}
+
+.navbar {
+    @include max-width;
     padding: 2rem; 
 }
 
